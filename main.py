@@ -45,7 +45,7 @@ def input_flotante(mensaje):
         except ValueError:
             print(Fore.RED + "Por favor, ingrese un valor numérico válido (ej: 10.5).")
 
-def meunregistrar_producto():
+def registrar_producto():
     """Registra un nuevo producto solicitando datos al usuario."""
     conexion = conectar_db()
     cursor = conexion.cursor()
