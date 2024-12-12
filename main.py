@@ -8,6 +8,8 @@ def conectar_db():
     """Crea una conexión a la base de datos 'inventario.db'."""
     return sqlite3.connect("inventario.db")
 
+
+
 def crear_tabla():
     """Crea la tabla 'productos' si no existe en la base de datos."""
     conexion = conectar_db()
@@ -43,7 +45,7 @@ def input_flotante(mensaje):
         except ValueError:
             print(Fore.RED + "Por favor, ingrese un valor numérico válido (ej: 10.5).")
 
-def registrar_producto():
+def meunregistrar_producto():
     """Registra un nuevo producto solicitando datos al usuario."""
     conexion = conectar_db()
     cursor = conexion.cursor()
@@ -170,7 +172,7 @@ def buscar_producto():
         for p in productos:
             print(Fore.YELLOW + "{:<5} | {:<20} | {:<30} | {:<10} | ${:<9.2f} | {:<15}".format(
                 p[0], p[1], p[2], p[3], p[4], p[5]))
-1
+
 def mostrar_menu():
     """Muestra el menú principal y devuelve la opción seleccionada."""
     print(Fore.CYAN + "\n--- MENÚ PRINCIPAL ---")
